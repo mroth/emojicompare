@@ -55,7 +55,7 @@
         $.getJSON( "http://cf.emojitracker.com/api/rankings", function( data ) {
           $.each( data, function( index, glyph ) {
             //the "proper" unified id
-            var id = glyph.id
+            var id = glyph.id;
 
             // handled for emojistatic
             var uid = glyph.id.toLowerCase()
@@ -72,6 +72,17 @@
           });
         });
       });
+    </script>
+
+    <!-- throw in google analytics cuz why not, lets see who looks at this -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-52956-14', 'mroth.github.io');
+      ga('send', 'pageview');
     </script>
   </body>
 </html>
