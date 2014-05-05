@@ -63,13 +63,12 @@
 
             // handled for emojistatic
             var uid = glyph.id.toLowerCase()
-                              .replace('-20e3','')     // inconsistency in cal's emojidata
                               .replace('2665','2764'); // apple uses the same char in both places,
                                                        // be "improper" here since what ppl expect.
 
             // handled for twitter library weirdness
             var tid = glyph.id.toLowerCase()
-                              .replace(/^00/,''); //forgot the zero padding guys
+                              .replace(/^00/,'');      // you forgot the zero padding guys
 
             var html = template({id: id, uid: uid, tid: tid, name: glyph.name});
             $('#chart ol').append( html );
